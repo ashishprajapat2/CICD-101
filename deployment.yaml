@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-node-app-container
-        image: my-node-app:latest
-        imagePullPolicy: Never
+        image: ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
