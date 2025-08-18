@@ -25,5 +25,5 @@ jobs:
       # This step would use the 'docker build' command in a real scenario
 
     - name: Simulate deployment
-      run: echo "Simulating a deployment..."
+      run: false
       # This is the step we will replace in the next video!
