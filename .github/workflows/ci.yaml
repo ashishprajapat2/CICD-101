@@ -1,0 +1,29 @@
+name: My First CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run automated tests
+      run: echo "Running automated tests... All tests passed! ✅"
+      # In a real app, this would be a command like: 'npm test'
+
+    - name: Build a Docker image
+      run: echo "Building a Docker image... Image created successfully!"
+      # This step would use the 'docker build' command in a real scenario
+
+    - name: Simulate deployment
+      run: echo "Code is ready! Deploying to production... 🚀"
+      # This is the step we will replace in the next video!
